@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="./Booking.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Booking</h1>
+
+        <div id="errorBox" class="errorBox" style="display:none;"></div>
+        <div id="successBox" class="successBox" style="display:none;"></div>
+
+        <form action="Booking.php" method="post">
+            <div class="deteCheck">
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="number" id="number" name="number" placeholder="Phone Number">
+            </div>
+            <input type="text" id="email" name="email" placeholder="Email">
+            <div class="deteCheck">
+                <input type="date" id="CheckIn" name="CheckIn">
+                <input type="date" id="CheckOut" name="CheckOut">
+            </div>
+            <select id="roomType" name="roomType" placeholder="Room Type" class="select">
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="twin">Twin</option>
+            </select>
+            <p class="back">Changed your mind? <a class="backHome" href="./Home.php">Go Home</a></p>
+            <button type="submit" id="Booking">Book Now</button>
+        </form>
+    </div>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get('error');
+        const success = params.get('success');
+        const errors = {
+            empty:  '⚠️ Please fill in all fields.',
+            dates:  '❌ Check-out date must be after check-in date.',
+            login:  '❌ You must be logged in to make a booking.',
+            server: '🔧 Server error, Please try again later.'
+        };
+        if (error && errors[error]) {
+            const box = document.getElementById('errorBox');
+            box.textContent = errors[error];
+            box.style.display = 'block';
+            document.body.style.color = "red";
+        }
+        if (success === 'booked') {
+            const box = document.getElementById('successBox');
+            box.textContent = '✅ Booking successful! We will contact you soon.';
+            box.style.display = 'block';
+            document.body.style.color = "green";
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Room</title>
+    <link rel="stylesheet" href="./ProductRoom.css">
+</head>
+<body>
+    <div class='main'>
+        <h1>Import Product</h1>
+
+        <div id="errorBox" class="errorBox" style="display:none;"></div>
+        <div id="successBox" class="successBox" style="display:none;"></div>
+
+        <form action="ProductRoom.php" method="post" enctype="multipart/form-data">
+            <div class="formInfoProduct">
+                <input type="number" name="roomNumber" placeholder="Room Number">
+                <input type="text" name="price" placeholder="Price">
+            </div>
+            <div class="formInfoProduct">
+                <select name="typeRoom" class="select">
+                    <option value="single">Single</option>
+                    <option value="double">Double</option>
+                    <option value="twin">Twin</option>
+                </select>
+                <select name="status" class="select">
+                    <option value="available">Available</option>
+                    <option value="booked">Booked</option>
+                    <option value="maintenance">Maintenance</option>
+                </select>
+            </div>
+            <div class="formInfoProduct">
+                <input type="file" name="imgRoom" placeholder="Image Room" accept="image/*">
+            </div>
+            <div>
+                <textarea type="text" name="description" placeholder="Description" class="description"></textarea>
+            </div>
+            <button type="submit" name=import>Import</button>
+        </form>
+    </div>
+
+    <script>
+
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get('error');
+    const success = params.get('success');
+    const messages = {
+        empty: '⚠️ Please fill in all fields.',
+        image: '❌ Please upload a valid image file.',
+        size: '❌ Image size must be less than 2.5 MB.',
+        format: '❌ Only PNG, JPG, JPEG, GIF and WEBP formats are allowed.',
+        upload: '❌ Failed to upload image. Please try again.',
+        server: '🔧 Server error. Please try again later.',
+        repetitive: '❌ This room number already exists.'
+    };
+    if (error && messages[error]) {
+        const box = document.getElementById('errorBox');
+        box.textContent = messages[error];
+        box.style.display = 'block';
+        document.body.style.color = "red";
+    }
+    if (success === 'imported') {  // اصلاح شد
+        const box = document.getElementById('successBox');
+        box.textContent = '✅ Importing successful!';
+        box.style.display = 'block';
+        document.body.style.color = "green";
+    }
+
+    </script>
+
+</body>
+</html>

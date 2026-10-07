@@ -1,0 +1,240 @@
+body {
+    color: #14274A;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    background: #f8f6f2;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* کانتینر اصلی */
+.roomContainer {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* عنوان صفحه */
+.pageTitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.pageTitle h1 {
+    font-size: 36px;
+    color: #14274A;
+    margin: 0;
+}
+
+.pageTitle p {
+    color: #8892a8;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* دکمه Back در بالا */
+.backTop {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.btnBackTop {
+    display: inline-block;
+    background: transparent;
+    color: #14274A;
+    border: 2px solid #14274A;
+    padding: 10px 28px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btnBackTop:hover {
+    background: #14274A;
+    color: white;
+    transform: translateX(-5px);
+}
+
+/* گرید سه ستونه */
+.roomGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* کارت اتاق */
+.roomCard {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(20, 39, 74, 0.10);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.roomCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 45px rgba(20, 39, 74, 0.18);
+}
+
+.roomImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #e8e4dc;
+    display: block;
+}
+
+.roomInfo {
+    padding: 20px 22px 25px;
+}
+
+.roomBadge {
+    display: inline-block;
+    background: #E0B973;
+    color: #14274A;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 14px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.roomTitle {
+    font-size: 22px;
+    font-weight: bold;
+    color: #14274A;
+    margin: 0 0 4px 0;
+}
+
+.roomSubtitle {
+    font-size: 13px;
+    color: #8892a8;
+    margin-bottom: 12px;
+}
+
+.roomPrice {
+    font-size: 26px;
+    font-weight: bold;
+    color: #E0B973;
+}
+
+.roomPrice span {
+    font-size: 14px;
+    font-weight: normal;
+    color: #8892a8;
+}
+
+.roomStatus {
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 8px 0 12px;
+}
+
+.status-available {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-booked {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.status-maintenance {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.roomDescription {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #4a5568;
+    margin: 10px 0 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.roomMeta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: 12px 0 18px;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #4a5568;
+    background: #f8f6f2;
+    padding: 7px 12px;
+    border-radius: 8px;
+}
+
+.metaIcon {
+    font-size: 14px;
+}
+
+.btnBook {
+    width: 50%;
+    display: inline-block;
+    background: #E0B973;
+    color: #14274A;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.btnBook:hover {
+    background: #c4a05c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(224, 185, 115, 0.35);
+}
+
+/* --- Error Card --- */
+
+.errorCard {
+    background: white;
+    padding: 50px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(20, 39, 74, 0.10);
+    grid-column: 1 / -1;
+}
+
+.errorCard span {
+    font-size: 50px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.errorCard h2 {
+    color: #14274A;
+    margin: 10px 0;
+}
+
+.errorCard p {
+    color: #8892a8;
+    font-size: 16px;
+}
+
+.errorCard .btnBook {
+    display: inline-block;
+    width: auto;
+    padding: 12px 35px;
+}

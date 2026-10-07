@@ -1,0 +1,107 @@
+body {
+    background: #14274A;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.main {
+    background: #ffffff;
+    padding: 10px 60px;
+    padding-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 35PX #c4a05c;
+    min-height: 33%;
+    min-width: 29%;
+}
+
+h1 {
+    font: 35px sans-serif;
+    text-align: center;
+    margin: 29px 10px;
+    font-weight: bold;
+    color: black;
+    /*color: #4481bb;*/
+}
+
+input, textarea, select {
+    display: flex;
+    border: 3px none;
+    background: #f0f0f06f;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 25px 0;
+    padding-left: 18px;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid #E0B973;
+}
+
+.formInfoProduct {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.description {
+    padding: 88px 0;
+    padding-left: 18px;
+}
+
+.inputImg {
+    padding: 125px 0;
+    padding-left: 18px;
+}
+
+button{
+    display: block;
+    border-radius: 20px;
+    padding: 20px 0;
+    width: 100%;
+    font-family: sans-serif;
+    background: #E0B973;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #c4a05c;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+form p {
+    color: rgb(81, 81, 81);
+    margin-top: 4%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.roomStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px #14274A solid;
+    padding-bottom: 48px;
+    width: 60%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.select {
+    display: flex;
+    border: 3px none;
+    background: #f0f0f06f;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 25px 0;
+    padding-left: 18px;
+    width: 100%;
+}

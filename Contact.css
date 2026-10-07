@@ -1,0 +1,265 @@
+body {
+    color: #ffffff;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #14274A;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 180px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-left: 12%;
+    margin-right: 5%;
+}
+
+.navbarNameHotel {
+    color: black;
+    background-image: url(./img/Rectangle\ 450.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.nameHotel {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    word-spacing: 15%;
+    padding: 0 50px;
+    padding-top: 44px;
+}
+
+.textHotel {
+    word-spacing: 60%;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.navText {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 59px;
+    display: flex;
+    gap: 50px;
+    margin-left: 250px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.textTitel {
+    font-size: 70px;
+    padding-top: 37px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 8%;
+}
+
+.contactInfo {
+    color: #14274A;
+    display: flex;
+    flex-direction: column;
+    gap: 167px;
+    justify-content: center;
+    align-items: center;
+}
+
+.textTitelHero {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.textBitHero {
+    font-size: 25px;
+}
+
+.ContactText {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 230px;
+}
+
+.ContactText p {
+    font-size: 30px;
+}
+
+.ContactText a {
+    color: #14274A;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input,textarea {
+    display: flex;
+    border: 2px solid #E0B973;
+    background: #f0f0f06f;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 25px 0;
+    padding-left: 18px;
+    width: 96%;
+    resize: none;
+}
+
+input:focus,textarea:focus {
+    outline: none;
+}
+
+.submit {
+    display: block;
+    border-radius: 20px;
+    padding: 20px 0;
+    width: 30%;
+    font-family: sans-serif;
+    background: #E0B973;
+    color: #fff;
+    font-size: 18px;
+    margin-top: -15px;
+    margin-left: 71%;
+}
+
+.submit:hover {
+    background: #c4a05c;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.contactInput {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.description {
+    padding: 88px 0;
+    padding-left: 18px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #14274A;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 72px 186px;
+    margin-top: 10%;
+}
+
+
+.footerText1 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 22px;
+    margin-left: -10px;
+}
+
+.footerText2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: -16px;
+}
+
+.textNameFooter {
+    font-size: 25px;
+    font-weight: bold;
+    word-spacing: 15%;
+}
+
+.navbarNameHotel1 {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.textHotel2 {
+    font-size: 9px;
+    word-spacing: 60%;
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footerContact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footerContact input {
+    color: white;
+    border: 3px solid #E0B973;
+    background-color: #14274A;
+    border-radius: 6px;
+    padding: 13px 15px;
+    margin-top: 8%;
+    width: 100%;
+    padding-right: 100px;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border: none;
+    background-color: #E0B973;
+    font-size: 15px;
+    color: #14274A;
+    border-radius: 6px;
+    margin-left: -10px;
+    margin-top: 8%;
+    padding: 14px 30px;
+}
+
+button:hover {
+    background: #c4a05c;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.book:hover {
+    background: #c4a05c;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.bookNow:hover {
+    background: #c4a05c;
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.navText a:hover {
+    transform: translateY(-2px);
+    cursor: pointer;
+}

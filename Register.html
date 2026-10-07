@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./Register.css">
+</head>
+<body>
+    <div class='main'>
+        <h1>Sign Up</h1>
+
+        <div id="errorBox" class="errorBox" style="display:none;"></div>
+        <div id="successBox" class="successBox" style="display:none;"></div>
+
+        <form action="Register.php" method="post">
+            <div class="info">
+                <input type="text" id="userName" name="userName" placeholder="User Name">
+                <input type="date" id="birthday" name="birthday" placeholder="Birthday">
+            </div>
+            <input type="text" id="email" name="email" placeholder="Email">
+            <input type="number" id="number" name="number" placeholder="Phone Number">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+            <p>Already a member? <a href="./LoginForm.php">Log in</a></p>
+            <button type="submit" id="singUp">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const error = params.get('error');
+        const messages = {
+            empty:    '⚠️ Please fill in all fields.',
+            age:      '❌ You must be at least 20 years old to register.',
+            passmatch:'❌ Passwords do not match.',
+            exists:   '❌ An account with this username, email or phone already exists.',
+            server:   '🔧 Server error, Please try again later.'
+        };
+        if (error && messages[error]) {
+            const box = document.getElementById('errorBox');
+            box.textContent = messages[error];
+            box.style.display = 'block';
+            document.body.style.color = "red";
+        }
+
+    </script>
+
+</body>
+</html>
